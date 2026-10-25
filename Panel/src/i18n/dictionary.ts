@@ -39,6 +39,9 @@ export const DICTS: Record<string, Partial18n> = {
     "errcat.config": "无法保存设置。",
     "errcat.internal": "发生意外错误。",
     "st.wrongLocation": "文件放错文件夹了 — 请移动到 game\\csgo", "cmd.h.botManagement": "机器人管理", "cmd.hint.botName": "机器人名称", "cmd.hint.number": "数量",
+    "cos.title": "饰品", "cos.knifeSkins": "掉落刀具皮肤", "cos.knifeSkinsHint": "随机皮肤，包含原版", "cos.premium": "高价皮肤",
+    "cos.premiumHint": "偏向昂贵的皮肤", "cos.music": "我的音乐盒", "cos.musicOff": "关闭", "cos.musicRandom": "每张地图随机",
+    "cos.noMatch": "没有匹配的音乐盒", "cos.unsupported": "当前面板版本不支持", "cos.nextMap": "已保存 — 下一张地图加载时生效",
   },
 
   tchinese: {
@@ -73,6 +76,9 @@ export const DICTS: Record<string, Partial18n> = {
     "errcat.config": "無法儲存設定。",
     "errcat.internal": "發生未預期的錯誤。",
     "st.wrongLocation": "檔案放錯資料夾了 — 請移動到 game\\csgo", "cmd.h.botManagement": "電腦人管理", "cmd.hint.botName": "電腦人名稱", "cmd.hint.number": "數量",
+    "cos.title": "飾品", "cos.knifeSkins": "掉落刀具外觀", "cos.knifeSkinsHint": "隨機外觀，包含原版", "cos.premium": "高價外觀",
+    "cos.premiumHint": "偏好昂貴的外觀", "cos.music": "我的音樂盒", "cos.musicOff": "關閉", "cos.musicRandom": "每張地圖隨機",
+    "cos.noMatch": "沒有符合的音樂盒", "cos.unsupported": "目前面板版本不支援", "cos.nextMap": "已儲存 — 下一張地圖載入時生效",
   },
 
   japanese: {
@@ -107,6 +113,9 @@ export const DICTS: Record<string, Partial18n> = {
     "errcat.config": "設定を保存できませんでした。",
     "errcat.internal": "予期しないエラーが発生しました。",
     "st.wrongLocation": "ファイルが間違ったフォルダーにあります — game\\csgo に移動してください", "cmd.h.botManagement": "ボット管理", "cmd.hint.botName": "ボット名", "cmd.hint.number": "数値",
+    "cos.title": "コスメティック", "cos.knifeSkins": "ドロップナイフのスキン", "cos.knifeSkinsHint": "ランダムなスキン（バニラを含む）", "cos.premium": "プレミアムスキン",
+    "cos.premiumHint": "高価なスキンを優先", "cos.music": "自分のミュージックキット", "cos.musicOff": "オフ", "cos.musicRandom": "マップごとにランダム",
+    "cos.noMatch": "一致するミュージックキットがありません", "cos.unsupported": "このパネルのバージョンでは利用できません", "cos.nextMap": "保存しました — 次のマップ読み込み時に適用",
   },
 
   koreana: {
@@ -141,6 +150,9 @@ export const DICTS: Record<string, Partial18n> = {
     "errcat.config": "설정을 저장할 수 없습니다.",
     "errcat.internal": "예기치 않은 오류가 발생했습니다.",
     "st.wrongLocation": "파일이 잘못된 폴더에 있습니다 — game\\csgo 로 옮기세요", "cmd.h.botManagement": "봇 관리", "cmd.hint.botName": "봇 이름", "cmd.hint.number": "숫자",
+    "cos.title": "코스메틱", "cos.knifeSkins": "드롭 나이프 스킨", "cos.knifeSkinsHint": "무작위 스킨 (기본 포함)", "cos.premium": "프리미엄 스킨",
+    "cos.premiumHint": "비싼 스킨 우선", "cos.music": "내 뮤직 키트", "cos.musicOff": "끄기", "cos.musicRandom": "맵마다 무작위",
+    "cos.noMatch": "일치하는 뮤직 키트 없음", "cos.unsupported": "이 패널 버전에서는 사용할 수 없음", "cos.nextMap": "저장됨 — 다음 맵 로드 시 적용",
   },
 
   french: {
@@ -175,6 +187,9 @@ export const DICTS: Record<string, Partial18n> = {
     "errcat.config": "Les paramètres n'ont pas pu être enregistrés.",
     "errcat.internal": "Une erreur inattendue s'est produite.",
     "st.wrongLocation": "Fichiers dans le mauvais dossier — déplacez-les dans game\\csgo", "cmd.h.botManagement": "GESTION DES BOTS", "cmd.hint.botName": "nom du bot", "cmd.hint.number": "nombre",
+    "cos.title": "Cosmétiques", "cos.knifeSkins": "Skins des couteaux lâchés", "cos.knifeSkinsHint": "Finitions aléatoires, vanilla inclus", "cos.premium": "Finitions premium",
+    "cos.premiumHint": "Privilégier les finitions chères", "cos.music": "Votre kit musical", "cos.musicOff": "Désactivé", "cos.musicRandom": "Aléatoire à chaque carte",
+    "cos.noMatch": "Aucun kit musical trouvé", "cos.unsupported": "Indisponible dans cette version du Panel", "cos.nextMap": "Enregistré — appliqué au prochain chargement de carte",
   },
 
   german: {
@@ -209,6 +224,9 @@ export const DICTS: Record<string, Partial18n> = {
     "errcat.config": "Die Einstellungen konnten nicht gespeichert werden.",
     "errcat.internal": "Ein unerwarteter Fehler ist aufgetreten.",
     "st.wrongLocation": "Dateien im falschen Ordner — verschiebe sie nach game\\csgo", "cmd.h.botManagement": "BOT-VERWALTUNG", "cmd.hint.botName": "Botname", "cmd.hint.number": "Zahl",
+    "cos.title": "Kosmetik", "cos.knifeSkins": "Skins für fallengelassene Messer", "cos.knifeSkinsHint": "Zufällige Lackierungen, Vanilla inklusive", "cos.premium": "Premium-Lackierungen",
+    "cos.premiumHint": "Teure Lackierungen bevorzugen", "cos.music": "Dein Musik-Kit", "cos.musicOff": "Aus", "cos.musicRandom": "Zufällig pro Karte",
+    "cos.noMatch": "Keine passenden Musik-Kits", "cos.unsupported": "In dieser Panel-Version nicht verfügbar", "cos.nextMap": "Gespeichert — gilt ab dem nächsten Kartenladen",
   },
 
   spanish: {
@@ -243,6 +261,9 @@ export const DICTS: Record<string, Partial18n> = {
     "errcat.config": "No se pudieron guardar los ajustes.",
     "errcat.internal": "Ocurrió un error inesperado.",
     "st.wrongLocation": "Archivos en la carpeta incorrecta — muévelos a game\\csgo", "cmd.h.botManagement": "GESTIÓN DE BOTS", "cmd.hint.botName": "nombre del bot", "cmd.hint.number": "número",
+    "cos.title": "Cosméticos", "cos.knifeSkins": "Skins de cuchillos soltados", "cos.knifeSkinsHint": "Acabados aleatorios, vanilla incluido", "cos.premium": "Acabados premium",
+    "cos.premiumHint": "Priorizar acabados caros", "cos.music": "Tu kit de música", "cos.musicOff": "Desactivado", "cos.musicRandom": "Aleatorio en cada mapa",
+    "cos.noMatch": "Ningún kit de música coincide", "cos.unsupported": "No disponible en esta versión del Panel", "cos.nextMap": "Guardado — se aplica al cargar el próximo mapa",
   },
 
   italian: {
@@ -277,6 +298,9 @@ export const DICTS: Record<string, Partial18n> = {
     "errcat.config": "Impossibile salvare le impostazioni.",
     "errcat.internal": "Si è verificato un errore imprevisto.",
     "st.wrongLocation": "File nella cartella sbagliata — spostali in game\\csgo", "cmd.h.botManagement": "GESTIONE BOT", "cmd.hint.botName": "nome bot", "cmd.hint.number": "numero",
+    "cos.title": "Cosmetici", "cos.knifeSkins": "Skin dei coltelli a terra", "cos.knifeSkinsHint": "Finiture casuali, vanilla inclusa", "cos.premium": "Finiture premium",
+    "cos.premiumHint": "Preferisci finiture costose", "cos.music": "Il tuo kit musicale", "cos.musicOff": "Disattivato", "cos.musicRandom": "Casuale a ogni mappa",
+    "cos.noMatch": "Nessun kit musicale corrispondente", "cos.unsupported": "Non disponibile in questa versione del Panel", "cos.nextMap": "Salvato — si applica al prossimo caricamento della mappa",
   },
 
   russian: {
@@ -311,6 +335,9 @@ export const DICTS: Record<string, Partial18n> = {
     "errcat.config": "Не удалось сохранить настройки.",
     "errcat.internal": "Произошла непредвиденная ошибка.",
     "st.wrongLocation": "Файлы в неправильной папке — переместите их в game\\csgo", "cmd.h.botManagement": "УПРАВЛЕНИЕ БОТАМИ", "cmd.hint.botName": "имя бота", "cmd.hint.number": "число",
+    "cos.title": "Косметика", "cos.knifeSkins": "Скины выброшенных ножей", "cos.knifeSkinsHint": "Случайные раскраски, включая ванильную", "cos.premium": "Премиум-раскраски",
+    "cos.premiumHint": "Предпочитать дорогие раскраски", "cos.music": "Ваш музыкальный набор", "cos.musicOff": "Выкл.", "cos.musicRandom": "Случайный на каждой карте",
+    "cos.noMatch": "Нет подходящих музыкальных наборов", "cos.unsupported": "Недоступно в этой версии панели", "cos.nextMap": "Сохранено — применится при загрузке следующей карты",
   },
 
   ukrainian: {
@@ -345,6 +372,9 @@ export const DICTS: Record<string, Partial18n> = {
     "errcat.config": "Не вдалося зберегти налаштування.",
     "errcat.internal": "Сталася неочікувана помилка.",
     "st.wrongLocation": "Файли в неправильній папці — перемістіть їх до game\\csgo", "cmd.h.botManagement": "КЕРУВАННЯ БОТАМИ", "cmd.hint.botName": "ім'я бота", "cmd.hint.number": "число",
+    "cos.title": "Косметика", "cos.knifeSkins": "Скіни викинутих ножів", "cos.knifeSkinsHint": "Випадкові забарвлення, зокрема ванільне", "cos.premium": "Преміум-забарвлення",
+    "cos.premiumHint": "Віддавати перевагу дорогим забарвленням", "cos.music": "Ваш музичний набір", "cos.musicOff": "Вимк.", "cos.musicRandom": "Випадковий на кожній карті",
+    "cos.noMatch": "Немає відповідних музичних наборів", "cos.unsupported": "Недоступно в цій версії панелі", "cos.nextMap": "Збережено — застосується під час завантаження наступної карти",
   },
 
   polish: {
@@ -379,6 +409,9 @@ export const DICTS: Record<string, Partial18n> = {
     "errcat.config": "Nie można zapisać ustawień.",
     "errcat.internal": "Wystąpił nieoczekiwany błąd.",
     "st.wrongLocation": "Pliki w złym folderze — przenieś je do game\\csgo", "cmd.h.botManagement": "ZARZĄDZANIE BOTAMI", "cmd.hint.botName": "nazwa bota", "cmd.hint.number": "liczba",
+    "cos.title": "Kosmetyki", "cos.knifeSkins": "Skiny upuszczonych noży", "cos.knifeSkinsHint": "Losowe wykończenia, w tym vanilla", "cos.premium": "Wykończenia premium",
+    "cos.premiumHint": "Preferuj drogie wykończenia", "cos.music": "Twój zestaw muzyczny", "cos.musicOff": "Wył.", "cos.musicRandom": "Losowy na każdej mapie",
+    "cos.noMatch": "Brak pasujących zestawów muzycznych", "cos.unsupported": "Niedostępne w tej wersji panelu", "cos.nextMap": "Zapisano — zadziała po wczytaniu następnej mapy",
   },
 
   dutch: {
@@ -413,6 +446,9 @@ export const DICTS: Record<string, Partial18n> = {
     "errcat.config": "De instellingen konden niet worden opgeslagen.",
     "errcat.internal": "Er is een onverwachte fout opgetreden.",
     "st.wrongLocation": "Bestanden in de verkeerde map — verplaats ze naar game\\csgo", "cmd.h.botManagement": "BOTBEHEER", "cmd.hint.botName": "botnaam", "cmd.hint.number": "getal",
+    "cos.title": "Cosmetica", "cos.knifeSkins": "Skins voor gedropte messen", "cos.knifeSkinsHint": "Willekeurige afwerkingen, vanilla inbegrepen", "cos.premium": "Premium-afwerkingen",
+    "cos.premiumHint": "Dure afwerkingen voorrang geven", "cos.music": "Jouw muziekkit", "cos.musicOff": "Uit", "cos.musicRandom": "Willekeurig per map",
+    "cos.noMatch": "Geen muziekkits gevonden", "cos.unsupported": "Niet beschikbaar in deze Panel-versie", "cos.nextMap": "Opgeslagen — geldt vanaf de volgende map",
   },
 
   turkish: {
@@ -447,6 +483,9 @@ export const DICTS: Record<string, Partial18n> = {
     "errcat.config": "Ayarlar kaydedilemedi.",
     "errcat.internal": "Beklenmeyen bir hata oluştu.",
     "st.wrongLocation": "Dosyalar yanlış klasörde — game\\csgo içine taşıyın", "cmd.h.botManagement": "BOT YÖNETİMİ", "cmd.hint.botName": "bot adı", "cmd.hint.number": "sayı",
+    "cos.title": "Kozmetikler", "cos.knifeSkins": "Bırakılan bıçak kaplamaları", "cos.knifeSkinsHint": "Rastgele kaplamalar, orijinal dahil", "cos.premium": "Premium kaplamalar",
+    "cos.premiumHint": "Pahalı kaplamaları öne çıkar", "cos.music": "Müzik setin", "cos.musicOff": "Kapalı", "cos.musicRandom": "Her haritada rastgele",
+    "cos.noMatch": "Eşleşen müzik seti yok", "cos.unsupported": "Bu Panel sürümünde kullanılamaz", "cos.nextMap": "Kaydedildi — sonraki harita yüklendiğinde uygulanır",
   },
 
   vietnamese: {
@@ -481,6 +520,9 @@ export const DICTS: Record<string, Partial18n> = {
     "errcat.config": "Không thể lưu cài đặt.",
     "errcat.internal": "Đã xảy ra lỗi không mong muốn.",
     "st.wrongLocation": "Tệp nằm sai thư mục — hãy chuyển vào game\\csgo", "cmd.h.botManagement": "QUẢN LÝ BOT", "cmd.hint.botName": "tên bot", "cmd.hint.number": "số",
+    "cos.title": "Vật phẩm trang trí", "cos.knifeSkins": "Skin dao bị thả", "cos.knifeSkinsHint": "Skin ngẫu nhiên, gồm cả bản gốc", "cos.premium": "Skin cao cấp",
+    "cos.premiumHint": "Ưu tiên skin đắt tiền", "cos.music": "Bộ nhạc của bạn", "cos.musicOff": "Tắt", "cos.musicRandom": "Ngẫu nhiên mỗi bản đồ",
+    "cos.noMatch": "Không có bộ nhạc phù hợp", "cos.unsupported": "Không khả dụng trong phiên bản Panel này", "cos.nextMap": "Đã lưu — áp dụng khi tải bản đồ tiếp theo",
   },
 
   thai: {
@@ -515,6 +557,9 @@ export const DICTS: Record<string, Partial18n> = {
     "errcat.config": "ไม่สามารถบันทึกการตั้งค่าได้",
     "errcat.internal": "เกิดข้อผิดพลาดที่ไม่คาดคิด",
     "st.wrongLocation": "ไฟล์อยู่ผิดโฟลเดอร์ — ย้ายไปไว้ใน game\\csgo", "cmd.h.botManagement": "การจัดการบอท", "cmd.hint.botName": "ชื่อบอท", "cmd.hint.number": "จำนวน",
+    "cos.title": "ไอเทมตกแต่ง", "cos.knifeSkins": "สกินมีดที่ทิ้ง", "cos.knifeSkinsHint": "สกินสุ่ม รวมแบบดั้งเดิม", "cos.premium": "สกินพรีเมียม",
+    "cos.premiumHint": "เน้นสกินราคาแพง", "cos.music": "ชุดเพลงของคุณ", "cos.musicOff": "ปิด", "cos.musicRandom": "สุ่มทุกแผนที่",
+    "cos.noMatch": "ไม่พบชุดเพลงที่ตรงกัน", "cos.unsupported": "ใช้ไม่ได้ใน Panel เวอร์ชันนี้", "cos.nextMap": "บันทึกแล้ว — มีผลเมื่อโหลดแผนที่ถัดไป",
   },
 
   indonesian: {
@@ -549,6 +594,9 @@ export const DICTS: Record<string, Partial18n> = {
     "errcat.config": "Pengaturan tidak dapat disimpan.",
     "errcat.internal": "Terjadi kesalahan yang tidak terduga.",
     "st.wrongLocation": "Berkas di folder yang salah — pindahkan ke game\\csgo", "cmd.h.botManagement": "MANAJEMEN BOT", "cmd.hint.botName": "nama bot", "cmd.hint.number": "angka",
+    "cos.title": "Kosmetik", "cos.knifeSkins": "Skin pisau yang dijatuhkan", "cos.knifeSkinsHint": "Finishing acak, termasuk vanilla", "cos.premium": "Finishing premium",
+    "cos.premiumHint": "Utamakan finishing mahal", "cos.music": "Kit musikmu", "cos.musicOff": "Mati", "cos.musicRandom": "Acak tiap peta",
+    "cos.noMatch": "Tidak ada kit musik yang cocok", "cos.unsupported": "Tidak tersedia di versi Panel ini", "cos.nextMap": "Tersimpan — berlaku saat peta berikutnya dimuat",
   },
 
   czech: {
@@ -583,6 +631,9 @@ export const DICTS: Record<string, Partial18n> = {
     "errcat.config": "Nastavení se nepodařilo uložit.",
     "errcat.internal": "Došlo k neočekávané chybě.",
     "st.wrongLocation": "Soubory ve špatné složce — přesuňte je do game\\csgo", "cmd.h.botManagement": "SPRÁVA BOTŮ", "cmd.hint.botName": "jméno bota", "cmd.hint.number": "číslo",
+    "cos.title": "Kosmetika", "cos.knifeSkins": "Skiny odhozených nožů", "cos.knifeSkinsHint": "Náhodné vzhledy, včetně vanilla", "cos.premium": "Prémiové vzhledy",
+    "cos.premiumHint": "Upřednostnit drahé vzhledy", "cos.music": "Tvoje hudební sada", "cos.musicOff": "Vyp.", "cos.musicRandom": "Náhodně na každé mapě",
+    "cos.noMatch": "Žádná odpovídající hudební sada", "cos.unsupported": "V této verzi panelu nedostupné", "cos.nextMap": "Uloženo — projeví se při načtení další mapy",
   },
 
   swedish: {
@@ -617,6 +668,9 @@ export const DICTS: Record<string, Partial18n> = {
     "errcat.config": "Inställningarna kunde inte sparas.",
     "errcat.internal": "Ett oväntat fel inträffade.",
     "st.wrongLocation": "Filer i fel mapp — flytta dem till game\\csgo", "cmd.h.botManagement": "BOTHANTERING", "cmd.hint.botName": "botnamn", "cmd.hint.number": "antal",
+    "cos.title": "Kosmetika", "cos.knifeSkins": "Skins på släppta knivar", "cos.knifeSkinsHint": "Slumpade utföranden, vanilla inräknat", "cos.premium": "Premiumutföranden",
+    "cos.premiumHint": "Föredra dyra utföranden", "cos.music": "Ditt musikpaket", "cos.musicOff": "Av", "cos.musicRandom": "Slumpat varje karta",
+    "cos.noMatch": "Inga matchande musikpaket", "cos.unsupported": "Inte tillgängligt i denna Panel-version", "cos.nextMap": "Sparat — gäller när nästa karta laddas",
   },
 
   danish: {
@@ -651,6 +705,9 @@ export const DICTS: Record<string, Partial18n> = {
     "errcat.config": "Indstillingerne kunne ikke gemmes.",
     "errcat.internal": "Der opstod en uventet fejl.",
     "st.wrongLocation": "Filer i den forkerte mappe — flyt dem til game\\csgo", "cmd.h.botManagement": "BOTHÅNDTERING", "cmd.hint.botName": "botnavn", "cmd.hint.number": "tal",
+    "cos.title": "Kosmetik", "cos.knifeSkins": "Skins på smidte knive", "cos.knifeSkinsHint": "Tilfældige finishes, vanilla inkluderet", "cos.premium": "Premium-finishes",
+    "cos.premiumHint": "Foretræk dyre finishes", "cos.music": "Dit musiksæt", "cos.musicOff": "Fra", "cos.musicRandom": "Tilfældigt på hver bane",
+    "cos.noMatch": "Ingen matchende musiksæt", "cos.unsupported": "Ikke tilgængelig i denne Panel-version", "cos.nextMap": "Gemt — gælder når næste bane indlæses",
   },
 
   norwegian: {
@@ -685,6 +742,9 @@ export const DICTS: Record<string, Partial18n> = {
     "errcat.config": "Innstillingene kunne ikke lagres.",
     "errcat.internal": "Det oppstod en uventet feil.",
     "st.wrongLocation": "Filer i feil mappe — flytt dem til game\\csgo", "cmd.h.botManagement": "BOTHÅNDTERING", "cmd.hint.botName": "botnavn", "cmd.hint.number": "tall",
+    "cos.title": "Kosmetikk", "cos.knifeSkins": "Skins på sluppede kniver", "cos.knifeSkinsHint": "Tilfeldige utførelser, vanilla inkludert", "cos.premium": "Premium-utførelser",
+    "cos.premiumHint": "Foretrekk dyre utførelser", "cos.music": "Ditt musikksett", "cos.musicOff": "Av", "cos.musicRandom": "Tilfeldig på hvert kart",
+    "cos.noMatch": "Ingen samsvarende musikksett", "cos.unsupported": "Ikke tilgjengelig i denne Panel-versjonen", "cos.nextMap": "Lagret — gjelder når neste kart lastes",
   },
 
   finnish: {
@@ -719,6 +779,9 @@ export const DICTS: Record<string, Partial18n> = {
     "errcat.config": "Asetuksia ei voitu tallentaa.",
     "errcat.internal": "Tapahtui odottamaton virhe.",
     "st.wrongLocation": "Tiedostot väärässä kansiossa — siirrä ne kansioon game\\csgo", "cmd.h.botManagement": "BOTTIEN HALLINTA", "cmd.hint.botName": "botin nimi", "cmd.hint.number": "numero",
+    "cos.title": "Kosmetiikka", "cos.knifeSkins": "Pudotettujen veitsien skinit", "cos.knifeSkinsHint": "Satunnaiset viimeistelyt, vanilla mukaan lukien", "cos.premium": "Premium-viimeistelyt",
+    "cos.premiumHint": "Suosi kalliita viimeistelyjä", "cos.music": "Oma musiikkipakettisi", "cos.musicOff": "Pois", "cos.musicRandom": "Satunnainen joka kartalla",
+    "cos.noMatch": "Ei vastaavia musiikkipaketteja", "cos.unsupported": "Ei käytettävissä tässä Panel-versiossa", "cos.nextMap": "Tallennettu — tulee voimaan seuraavan kartan latautuessa",
   },
 
   hungarian: {
@@ -753,6 +816,9 @@ export const DICTS: Record<string, Partial18n> = {
     "errcat.config": "A beállításokat nem sikerült menteni.",
     "errcat.internal": "Váratlan hiba történt.",
     "st.wrongLocation": "A fájlok rossz mappában vannak — helyezd át a game\\csgo mappába", "cmd.h.botManagement": "BOTOK KEZELÉSE", "cmd.hint.botName": "bot neve", "cmd.hint.number": "szám",
+    "cos.title": "Kozmetikumok", "cos.knifeSkins": "Eldobott kések skinjei", "cos.knifeSkinsHint": "Véletlen kidolgozás, a vanilla is", "cos.premium": "Prémium kidolgozások",
+    "cos.premiumHint": "Drága kidolgozások előnyben", "cos.music": "Saját zenei csomagod", "cos.musicOff": "Ki", "cos.musicRandom": "Véletlenszerű minden pályán",
+    "cos.noMatch": "Nincs egyező zenei csomag", "cos.unsupported": "Ebben a Panel-verzióban nem érhető el", "cos.nextMap": "Mentve — a következő pálya betöltésekor lép életbe",
   },
 
   romanian: {
@@ -787,6 +853,9 @@ export const DICTS: Record<string, Partial18n> = {
     "errcat.config": "Setările nu au putut fi salvate.",
     "errcat.internal": "A apărut o eroare neașteptată.",
     "st.wrongLocation": "Fișiere în folderul greșit — mută-le în game\\csgo", "cmd.h.botManagement": "GESTIONARE BOȚI", "cmd.hint.botName": "nume bot", "cmd.hint.number": "număr",
+    "cos.title": "Cosmetice", "cos.knifeSkins": "Skinuri pentru cuțitele aruncate", "cos.knifeSkinsHint": "Finisaje aleatorii, inclusiv vanilla", "cos.premium": "Finisaje premium",
+    "cos.premiumHint": "Preferă finisajele scumpe", "cos.music": "Kitul tău muzical", "cos.musicOff": "Oprit", "cos.musicRandom": "Aleatoriu pe fiecare hartă",
+    "cos.noMatch": "Niciun kit muzical găsit", "cos.unsupported": "Indisponibil în această versiune a Panel-ului", "cos.nextMap": "Salvat — se aplică la încărcarea următoarei hărți",
   },
 
   greek: {
@@ -821,6 +890,9 @@ export const DICTS: Record<string, Partial18n> = {
     "errcat.config": "Δεν ήταν δυνατή η αποθήκευση των ρυθμίσεων.",
     "errcat.internal": "Παρουσιάστηκε ένα απρόσμενο σφάλμα.",
     "st.wrongLocation": "Τα αρχεία είναι σε λάθος φάκελο — μετακινήστε τα στο game\\csgo", "cmd.h.botManagement": "ΔΙΑΧΕΙΡΙΣΗ BOT", "cmd.hint.botName": "όνομα bot", "cmd.hint.number": "αριθμός",
+    "cos.title": "Διακοσμητικά", "cos.knifeSkins": "Skins για πεταμένα μαχαίρια", "cos.knifeSkinsHint": "Τυχαία φινιρίσματα, μαζί με το vanilla", "cos.premium": "Premium φινιρίσματα",
+    "cos.premiumHint": "Προτίμηση ακριβών φινιρισμάτων", "cos.music": "Το μουσικό σου κιτ", "cos.musicOff": "Ανενεργό", "cos.musicRandom": "Τυχαίο σε κάθε χάρτη",
+    "cos.noMatch": "Δεν βρέθηκαν μουσικά κιτ", "cos.unsupported": "Μη διαθέσιμο σε αυτή την έκδοση του Panel", "cos.nextMap": "Αποθηκεύτηκε — εφαρμόζεται στη φόρτωση του επόμενου χάρτη",
   },
 
   bulgarian: {
@@ -855,6 +927,9 @@ export const DICTS: Record<string, Partial18n> = {
     "errcat.config": "Настройките не могат да бъдат запазени.",
     "errcat.internal": "Възникна неочаквана грешка.",
     "st.wrongLocation": "Файловете са в грешната папка — преместете ги в game\\csgo", "cmd.h.botManagement": "УПРАВЛЕНИЕ НА БОТОВЕ", "cmd.hint.botName": "име на бот", "cmd.hint.number": "число",
+    "cos.title": "Козметика", "cos.knifeSkins": "Скинове на пуснати ножове", "cos.knifeSkinsHint": "Случайни облици, включително стандартния", "cos.premium": "Премиум облици",
+    "cos.premiumHint": "Предпочитай скъпи облици", "cos.music": "Твоят музикален комплект", "cos.musicOff": "Изкл.", "cos.musicRandom": "Случаен на всяка карта",
+    "cos.noMatch": "Няма съвпадащи музикални комплекти", "cos.unsupported": "Не е налично в тази версия на панела", "cos.nextMap": "Запазено — прилага се при зареждане на следващата карта",
   },
 
   // Portuguese (pt-PT) and Brazilian Portuguese
@@ -890,6 +965,9 @@ export const DICTS: Record<string, Partial18n> = {
     "errcat.config": "Não foi possível guardar as definições.",
     "errcat.internal": "Ocorreu um erro inesperado.",
     "st.wrongLocation": "Ficheiros na pasta errada — mova-os para game\\csgo", "cmd.h.botManagement": "GESTÃO DE BOTS", "cmd.hint.botName": "nome do bot", "cmd.hint.number": "número",
+    "cos.title": "Cosméticos", "cos.knifeSkins": "Skins das facas largadas", "cos.knifeSkinsHint": "Acabamentos aleatórios, vanilla incluída", "cos.premium": "Acabamentos premium",
+    "cos.premiumHint": "Preferir acabamentos caros", "cos.music": "O teu kit de música", "cos.musicOff": "Desligado", "cos.musicRandom": "Aleatório em cada mapa",
+    "cos.noMatch": "Nenhum kit de música encontrado", "cos.unsupported": "Indisponível nesta versão do Panel", "cos.nextMap": "Guardado — aplica-se ao carregar o próximo mapa",
   },
 
   brazilian: {
@@ -924,6 +1002,9 @@ export const DICTS: Record<string, Partial18n> = {
     "errcat.config": "Não foi possível salvar as configurações.",
     "errcat.internal": "Ocorreu um erro inesperado.",
     "st.wrongLocation": "Arquivos na pasta errada — mova-os para game\\csgo", "cmd.h.botManagement": "GERENCIAMENTO DE BOTS", "cmd.hint.botName": "nome do bot", "cmd.hint.number": "número",
+    "cos.title": "Cosméticos", "cos.knifeSkins": "Skins das facas soltas", "cos.knifeSkinsHint": "Acabamentos aleatórios, vanilla incluída", "cos.premium": "Acabamentos premium",
+    "cos.premiumHint": "Priorizar acabamentos caros", "cos.music": "Seu kit de música", "cos.musicOff": "Desligado", "cos.musicRandom": "Aleatório a cada mapa",
+    "cos.noMatch": "Nenhum kit de música encontrado", "cos.unsupported": "Indisponível nesta versão do Panel", "cos.nextMap": "Salvo — aplicado ao carregar o próximo mapa",
   },
 
   // Latin-American Spanish — reuse Spanish with minor wording
@@ -959,5 +1040,8 @@ export const DICTS: Record<string, Partial18n> = {
     "errcat.config": "No se pudo guardar la configuración.",
     "errcat.internal": "Ocurrió un error inesperado.",
     "st.wrongLocation": "Archivos en la carpeta incorrecta — muévelos a game\\csgo", "cmd.h.botManagement": "GESTIÓN DE BOTS", "cmd.hint.botName": "nombre del bot", "cmd.hint.number": "número",
+    "cos.title": "Cosméticos", "cos.knifeSkins": "Skins de cuchillos soltados", "cos.knifeSkinsHint": "Acabados aleatorios, vanilla incluido", "cos.premium": "Acabados premium",
+    "cos.premiumHint": "Priorizar acabados caros", "cos.music": "Tu kit de música", "cos.musicOff": "Desactivado", "cos.musicRandom": "Aleatorio en cada mapa",
+    "cos.noMatch": "Ningún kit de música coincide", "cos.unsupported": "No disponible en esta versión del Panel", "cos.nextMap": "Guardado — se aplica al cargar el siguiente mapa",
   },
 };

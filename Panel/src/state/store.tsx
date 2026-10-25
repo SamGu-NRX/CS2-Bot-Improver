@@ -9,6 +9,7 @@ import {
 } from "react";
 import {
   api,
+  isMissingCommand,
   toAppError,
   type AppConfig,
   type AppError,
@@ -23,6 +24,8 @@ import {
   type GameMode,
   type ModeInfo,
   type NadesValue,
+  type PlayerCosmetics,
+  type PlayerCosmeticsState,
   type PresetsState,
 } from "../lib/api";
 
@@ -47,6 +50,10 @@ type Store = {
    *  one of them is. */
   botItemsPending: Record<BotItemKey, boolean>;
   dropKnives: DropKnivesState | null;
+  cosmetics: PlayerCosmeticsState | null;
+  /** The running ui.exe has no player-cosmetics commands (older backend). */
+  cosmeticsUnsupported: boolean;
+  cosmeticsPending: boolean;
   csgoPath: string | null;
   /** Last global error (for the error modal). */
   error: AppError | null;
@@ -67,6 +74,8 @@ type Store = {
     bindKey: string,
     selected: number[]
   ) => Promise<DropKnivesState | null>;
+  /** Saves a partial change on top of the latest requested values. */
+  applyCosmetics: (patch: Partial<PlayerCosmetics>) => Promise<PlayerCosmeticsState | null>;
 };
 
 /** A boolean flag persisted in localStorage so it survives a full close/reopen
@@ -168,6 +177,23 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
   const [botItemsPending, setBotItemPending, clearBotItemsPending] =
     usePersistedFlagMap("cs2bi.botItemsPending");
   const [dropKnives, setDropKnives] = useState<DropKnivesState | null>(null);
+  const [cosmetics, setCosmetics] = useState<PlayerCosmeticsState | null>(null);
+  const [cosmeticsPending, setCosmeticsPending] = usePersistedFlag("cs2bi.cosmeticsPending");
+  // A backend without the cosmetics commands won't gain them while the panel is
+  // open, so after the first "Command ... not found" the poll stops asking.
+  const [cosmeticsUnsupported, setCosmeticsUnsupported] = useState(false);
+  const cosmeticsUnsupportedRef = useRef(false);
+  // Writes run one at a time, each built on the newest requested values, so two
+  // quick edits can't undo each other. `cosmeticsEpoch` bumps on every write;
+  // a poll that started before a write is dropped instead of painting old values.
+  const cosmeticsRef = useRef<PlayerCosmeticsState | null>(null);
+  const cosmeticsIntentRef = useRef<PlayerCosmetics | null>(null);
+  const cosmeticsWrites = useRef({ chain: Promise.resolve() as Promise<unknown>, inFlight: 0 });
+  const cosmeticsEpoch = useRef(0);
+  const showCosmetics = useCallback((info: PlayerCosmeticsState | null) => {
+    cosmeticsRef.current = info;
+    setCosmetics(info);
+  }, []);
   const [error, setError] = useState<AppError | null>(null);
   const configRef = useRef<AppConfig | null>(null);
   configRef.current = config;
@@ -235,6 +261,80 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
       }
     },
     [directory, reportError]
+  );
+
+  const markCosmeticsUnsupported = useCallback(() => {
+    cosmeticsUnsupportedRef.current = true;
+    setCosmeticsUnsupported(true);
+    showCosmetics(null);
+    setCosmeticsPending(false);
+  }, [showCosmetics]);
+
+  // Fetched apart from refreshAll's Promise.all so an older backend that lacks
+  // get_player_cosmetics leaves every other section working.
+  const loadCosmetics = useCallback(
+    async (csgo: string, silent: boolean) => {
+      if (cosmeticsUnsupportedRef.current) return;
+      const epoch = cosmeticsEpoch.current;
+      const stale = () =>
+        epoch !== cosmeticsEpoch.current || cosmeticsWrites.current.inFlight > 0;
+      try {
+        const info = await api.getPlayerCosmetics(csgo);
+        if (stale()) return;
+        showCosmetics(info);
+        if (!info.cs2_running) setCosmeticsPending(false);
+      } catch (e) {
+        if (isMissingCommand(e)) {
+          markCosmeticsUnsupported();
+          return;
+        }
+        if (silent || stale()) return;
+        showCosmetics(null);
+        setCosmeticsPending(false);
+        reportError(e);
+      }
+    },
+    [markCosmeticsUnsupported, reportError, showCosmetics]
+  );
+
+  const applyCosmetics = useCallback(
+    async (patch: Partial<PlayerCosmetics>) => {
+      const csgo = directory?.valid ? directory.selected : null;
+      if (!csgo || cosmeticsUnsupportedRef.current) return null;
+      const writes = cosmeticsWrites.current;
+      const shown = cosmeticsRef.current;
+      const base: PlayerCosmetics | null =
+        writes.inFlight > 0 && cosmeticsIntentRef.current
+          ? cosmeticsIntentRef.current
+          : shown && {
+              dropped_knife_skins: shown.dropped_knife_skins,
+              dropped_knife_premium: shown.dropped_knife_premium,
+              music_kit: shown.music_kit,
+            };
+      // Nothing read yet: there is no full set of values to write.
+      if (!base) return null;
+      const next = { ...base, ...patch };
+      cosmeticsIntentRef.current = next;
+      cosmeticsEpoch.current++;
+      writes.inFlight++;
+      const write = () => api.setPlayerCosmetics(csgo, next);
+      const request = writes.chain.then(write, write);
+      writes.chain = request.catch(() => undefined);
+      try {
+        const info = await request;
+        // A newer queued write will report the final state; skip this one.
+        if (writes.inFlight === 1) showCosmetics(info);
+        setCosmeticsPending(info.cs2_running);
+        return info;
+      } catch (e) {
+        if (isMissingCommand(e)) markCosmeticsUnsupported();
+        else reportError(e);
+        return null;
+      } finally {
+        writes.inFlight--;
+      }
+    },
+    [directory, markCosmeticsUnsupported, reportError, showCosmetics]
   );
 
   const applyAim = useCallback(
@@ -322,6 +422,7 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
     const info = await refreshDirectory();
     const csgo = info?.valid ? info.selected : null;
     if (csgo) {
+      const cosmeticsLoad = loadCosmetics(csgo, silent);
       try {
         const [f, d, m, b, p, k] = await Promise.all([
           api.validateFiles(csgo),
@@ -350,7 +451,10 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
       } catch (e) {
         // Background poll: a transient read error shouldn't blank the UI or pop a
         // modal — keep the last good state and wait for the next tick.
-        if (silent) return;
+        if (silent) {
+          await cosmeticsLoad;
+          return;
+        }
         setFiles(null);
         setDifficulty(null);
         setMode(null);
@@ -365,6 +469,7 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
         setDropKnivesPending(false);
         reportError(e);
       }
+      await cosmeticsLoad;
     } else {
       setFiles(null);
       setDifficulty(null);
@@ -372,14 +477,17 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
       setBotItems(null);
       setPresets(null);
       setDropKnives(null);
+      cosmeticsEpoch.current++;
+      showCosmetics(null);
       setAimPending(false);
       setNadesPending(false);
       setModePending(false);
       setDifficultyPending(false);
       clearBotItemsPending();
       setDropKnivesPending(false);
+      setCosmeticsPending(false);
     }
-  }, [refreshDirectory, reportError]);
+  }, [refreshDirectory, loadCosmetics, reportError, showCosmetics]);
 
   const updateConfig = useCallback(
     async (patch: Partial<AppConfig>) => {
@@ -500,6 +608,9 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
     dropKnivesPending,
     botItemsPending,
     dropKnives,
+    cosmetics,
+    cosmeticsUnsupported,
+    cosmeticsPending,
     csgoPath: directory?.valid ? directory.selected : null,
     error,
     clearError,
@@ -516,6 +627,7 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
     applyAim,
     applyNades,
     applyDropKnives,
+    applyCosmetics,
   };
 
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>;
