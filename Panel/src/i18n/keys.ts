@@ -41,6 +41,19 @@ export const EN = {
   "bi.agents": "Agents",
   "bi.music": "Music Kits",
 
+  // Your own cosmetics (BotRandomizer br_* convars). Kit names stay in English.
+  "cos.title": "Cosmetics",
+  "cos.knifeSkins": "Dropped knife skins",
+  "cos.knifeSkinsHint": "Random finishes, vanilla included",
+  "cos.premium": "Premium finishes",
+  "cos.premiumHint": "Favor expensive finishes",
+  "cos.music": "Your music kit",
+  "cos.musicOff": "Off",
+  "cos.musicRandom": "Random each map",
+  "cos.noMatch": "No music kits match",
+  "cos.unsupported": "Not available in this Panel version",
+  "cos.nextMap": "Saved — applies on next map load",
+
   "cmd.title": "Commands",
   "cmd.search": "Search…",
   "cmd.h.gameMode": "GAME MODE",

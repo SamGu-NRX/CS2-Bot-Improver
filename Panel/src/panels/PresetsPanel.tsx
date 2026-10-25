@@ -3,6 +3,7 @@ import Segmented from "../components/Segmented";
 import SubPage from "../components/SubPage";
 import TeamsSection from "./TeamsSection";
 import DropKnivesSection from "./DropKnivesSection";
+import CosmeticsSection from "./CosmeticsSection";
 import { useStore } from "../state/store";
 import { useT } from "../i18n";
 import type { AimValue, NadesValue } from "../lib/api";
@@ -77,6 +78,7 @@ export default function PresetsPanel({ onBack }: { onBack: () => void }) {
 
       <TeamsSection />
       <DropKnivesSection />
+      <CosmeticsSection />
     </SubPage>
   );
 }
